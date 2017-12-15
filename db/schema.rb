@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171215171441) do
+ActiveRecord::Schema.define(version: 20171215171843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171215171441) do
     t.string "owner"
     t.string "motto"
     t.integer "rating"
+    t.integer "location_id"
   end
 
 end
