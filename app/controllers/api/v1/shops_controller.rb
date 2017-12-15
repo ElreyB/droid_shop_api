@@ -8,6 +8,7 @@ class Api::V1::ShopsController <  ApplicationController
     rating = params[:rating]
     name = params[:name]
     droid = params[:droid]
+    random = params[:random]
     if location
       @shops = Shop.shops_by_location(location_id)
     end
@@ -22,6 +23,9 @@ class Api::V1::ShopsController <  ApplicationController
     end
     if droid
       @shops = Shop.search_by_droid(droid)
+    end
+    if random
+      @shops = Shop.random_shop
     end
     json_response(@shops)
   end

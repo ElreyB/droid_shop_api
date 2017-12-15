@@ -49,4 +49,11 @@ describe "get all shops from single location" do
     end
   end
 
+  context "when given a random shop request" do
+    it "returns one shop" do
+      get "/api/v1/locations/#{location.id}/shops?random=random", headers: {Authorization: ENV['DROID_SHOP_API_KEY']}
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end

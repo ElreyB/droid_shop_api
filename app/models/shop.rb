@@ -8,4 +8,8 @@ class Shop < ApplicationRecord
   scope :search_by_owner, -> (owner){ where 'owner = ?', owner}
   scope :search_by_rating, -> (rating){ where 'rating = ?', rating}
   scope :search_by_droid, -> (droid){ where 'droid = ?', droid}
+
+  def self.random_shop
+    random_shop = Shop.all.shuffle.first
+  end
 end

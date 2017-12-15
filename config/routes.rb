@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       resources :locations do
         resources :shops
       end
+
+      resources :shops, only: :index
     end
   end
 end
