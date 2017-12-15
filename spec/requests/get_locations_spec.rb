@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "get all locations route", :type => :request do
   let!(:location) { FactoryBot.create_list(:location, 10) }
 
-  before { get '/api/v1/locations' }
+  before { get '/api/v1/locations', headers: {Authorization: ENV['DROID_SHOP_API_KEY']}}
 
   it "returns all meals on page one" do
     expect(JSON.parse(response.body).size).to eq 10
