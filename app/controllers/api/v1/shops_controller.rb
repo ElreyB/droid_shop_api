@@ -7,6 +7,7 @@ class Api::V1::ShopsController <  ApplicationController
     owner = params[:owner]
     rating = params[:rating]
     name = params[:name]
+    droid = params[:droid]
     if location
       @shops = Shop.shops(location)
     end
@@ -18,6 +19,9 @@ class Api::V1::ShopsController <  ApplicationController
     end
     if rating
       @shops = Shop.search_by_rating(rating)
+    end
+    if droid
+      @shops = Shop.search_by_droid(droid)
     end
     json_response(@shops)
   end
@@ -75,7 +79,7 @@ class Api::V1::ShopsController <  ApplicationController
 private
 
   def shop_params
-    params.permit(:name, :owner, :motto, :rating)
+    params.permit(:name, :owner, :motto, :rating, :droid)
   end
 
 end

@@ -16,7 +16,11 @@ class Seed
       )
       7.times do |x|
         shop = location.shops.create!(
-          name: 
+          name: Faker::Space.star + " " + Faker::Commerce.material,
+          owner: Faker::StarWars.character,
+          motto: Faker::StarWars.quote,
+          rating: Faker::Number.between(1, 7),
+          droid: Faker::StarWars.droid
         )
       end
     end
@@ -26,3 +30,5 @@ end
 
 
 Seed.begin
+puts "Create #{Location.count} locations."
+puts "Create #{Shop.count} shops."

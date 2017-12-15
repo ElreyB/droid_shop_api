@@ -3,7 +3,7 @@ class Api::V1::LocationsController < ApplicationController
   include Response
 
   def index
-    @locations = Location.paginate(:page => params[:page]. :per_page => 10)
+    @locations = Location.paginate(:page => params[:page], :per_page => 10)
     planet = params[:planet]
     galaxy = params[:galaxy]
     if planet

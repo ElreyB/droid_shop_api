@@ -6,4 +6,5 @@ describe Shop do
   it { should validate_presence_of :owner }
   it { should validate_presence_of :motto }
   it { should validate_presence_of :rating }
+  it { should validate_presence_of :droid }
 end
