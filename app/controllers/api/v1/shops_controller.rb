@@ -3,14 +3,14 @@ class Api::V1::ShopsController <  ApplicationController
 
   def index
     @shops = Shop.all
-    location = params[:location_id]
+    location_id = params[:location_id]
     owner = params[:owner]
     rating = params[:rating]
     name = params[:name]
     droid = params[:droid]
-    # if location
-    #   @shops = Shop.shops_by_location(location)
-    # end
+    if location
+      @shops = Shop.shops_by_location(location_id)
+    end
     if owner
       @shops = Shop.search_by_owner(owner)
     end
