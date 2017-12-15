@@ -36,22 +36,24 @@ In the URI line put the following URIs:
   `GET 'http://localhost:3000/api/v1/locations/{location_id}'`
 * To get location by search query:
   `GET 'http://localhost:3000/api/v1/locations/'`
+  
   Params Keys | Values
-  ----------- | ------
-  planet      | (planet name )
-  galaxy      | (galaxy name )
+  --- | ---
+  planet | (planet name )
+  galaxy | (galaxy name )
 
 * To get a location's shop:
   `GET 'http://localhost:3000/api/v1/locations/{location_id}/shops'`
 * To get a location's shop by a specific key:
   `GET 'http://localhost:3000/api/v1/locations/{location_id}/shops'`
+  
   Params Keys | Values
-  ----------- | ------
-  name        | (shop name )
-  owner      | (owner name )
-  rating      | (rating name )
-  droid      | (droid name )
-  random     | random (will return a random shop)
+  --- | ---
+  name | (shop name )
+  owner | (owner name )
+  rating | (rating name )
+  droid | (droid name )
+  random | random (will return a random shop)
 
 #### _For any of the following route you need the Authorization key. Follow these step to get key..._
 ```
@@ -63,39 +65,47 @@ Then you are good to go
 
 * To add a location:
   `POST 'http://localhost:3000/api/v1/locations/`
+  
   Params Keys | Values
-  ----------- | ------
+  ------ | ------
   planet      | (new planet name )
   galaxy      | (new galaxy name )
+  
 * To add a location's shop:
   `POST 'http://localhost:3000/api/v1/locations/{location_id}/shops`
+  
   Params Keys | Values
-  ----------- | ------
+  ------ | ------
   name        | (new shop name )
   owner      | (new owner name )
   rating      | (new rating name )
   droid      | (new droid name )
   motto     | (new motto name )
+  
 * To update a location:
   `PUT 'http://localhost:3000/api/v1/locations/{location_id}`
   (add the key param of what you wish to change)
+  
   Params Keys | Values
-  ----------- | ------
+  ------ | ------
   planet      | (updated planet name )
   galaxy      | (updated galaxy name )
 
 * To update a location's shop:
   `PUT 'http://localhost:3000/api/v1/locations/{location_id}/shops`
   (add the key param of what you wish to change)
+  
   Params Keys | Values
-  ----------- | ------
+  ------ | ------
   name        | (updated shop name )
   owner      | (updated owner name )
   rating      | (updated rating name )
   droid      | (updated droid name )
   motto     | (updated motto name )
+  
 * To delete a location:
   `DELETE 'http://localhost:3000/api/v1/locations/{location_id}`
+  
 * To delete a location's shop:
   `DELETE 'http://localhost:3000/api/v1/locations/{location_id}/shops/{shop_id}`
 
