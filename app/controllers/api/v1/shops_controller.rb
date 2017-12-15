@@ -8,9 +8,9 @@ class Api::V1::ShopsController <  ApplicationController
     rating = params[:rating]
     name = params[:name]
     droid = params[:droid]
-    if location
-      @shops = Shop.shops(location)
-    end
+    # if location
+    #   @shops = Shop.shops_by_location(location)
+    # end
     if owner
       @shops = Shop.search_by_owner(owner)
     end
